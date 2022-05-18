@@ -6,7 +6,7 @@
    2. GENERAL
    ========================================================================== */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   color: #546E7A;
   font-size: 14px;
   font-weight: 400;
@@ -23,7 +23,7 @@ p {
   font-size: 14px;
   color: #adadad;
   line-height: 26px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   margin-bottom: 0;
 }
 
@@ -40,9 +40,9 @@ a {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stzhongs', sans-serif;
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 500;
   color: #263238;
 }
 
@@ -95,8 +95,8 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   font-size: 36px;
   margin-bottom: 20px;
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-family: 'Stzhongs', sans-serif;
+  font-weight: 500;
   color: #e63707;
   position: relative;
 }
@@ -117,7 +117,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   font-size: 60px;
   color: rgba(255, 255, 255, 0.07);
   z-index: 2;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stzhongs', sans-serif;
   font-weight: 500;
   text-transform: capitalize;
   position: absolute;
@@ -721,7 +721,7 @@ button:focus {
   color: #fff;
   font-size: 42px;
   margin-bottom: 30px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .hero-area-2 .contents h4 {
@@ -1398,7 +1398,7 @@ button:focus {
 
 .single-team {
   position: relative;
-  background: #f9f9f9;
+  background: #212121;
   border-radius: 4px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1454,7 +1454,7 @@ button:focus {
   width: 34px;
   color: #F97794;
   font-size: 14px;
-  background: #fff;
+  background: #333333;
   border-radius: 50px;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -1674,7 +1674,7 @@ button:focus {
 
 #carousel-area .carousel-item .carousel-caption h2 {
   font-size: 80px;
-  font-weight: 700;
+  font-weight: 500;
   color: #fff;
 }
 
@@ -2187,7 +2187,7 @@ textarea {
   font-size: 14px;
   font-weight: 500;
   color: #adadad;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   text-transform: uppercase;
   position: relative;
 }

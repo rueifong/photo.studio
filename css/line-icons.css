@@ -9,6 +9,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Stzhongs';
+  src:  url('../fonts/STZHONGS.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 [class^="lni-"], [class*=" lni-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'LineIcons' !important;
