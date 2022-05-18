@@ -97,7 +97,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #c91a09;
+  color: #e63707;
   position: relative;
 }
 
@@ -448,7 +448,7 @@ button:focus {
 }
 
 .menu-bg {
-  background-color: #fff !important;
+  background-color: #212121 !important;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
   z-index: 999;
   padding: 3px;
@@ -468,7 +468,7 @@ button:focus {
 }
 
 .menu-bg .navbar-nav .nav-link {
-  color: #263238 !important;
+  color: #adadad !important;
 }
 
 .menu-bg .navbar-nav .nav-link:hover {
@@ -491,6 +491,9 @@ button:focus {
 .navbar-expand-md .navbar-nav .nav-link.text-gray {
   color: #adadad;
 }
+.menu-bg.navbar-expand-md .navbar-nav .nav-link.text-gray {
+  color: #adadad;
+}
 
 .bg-white {
   background-color: #fff !important;
@@ -510,10 +513,6 @@ button:focus {
 
 .bg-white .logo-menu a {
   color: #F97794;
-}
-
-.bg-white .navbar-nav .nav-link {
-  color: #263238 !important;
 }
 
 .bg-white .navbar-nav .nav-link:hover {
@@ -1994,7 +1993,7 @@ textarea {
   margin-top: 5px;
   font-size: 18px;
   font-weight: 500;
-  color: #c91a09;
+  color: #e63707;
 }
 
 .contact-info p {
@@ -2200,7 +2199,7 @@ footer .footer-Content {
 }
 
 footer h3 {
-  color: #c91a09;
+  color: #e63707;
 }
 
 .textwidget {
