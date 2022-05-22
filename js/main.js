@@ -120,9 +120,9 @@
     new WOW().init();
 
     // one page navigation 
-    $('.main-navigation').onePageNav({
-            currentClass: 'active'
-    }); 
+    // $('.main-navigation').onePageNav({
+    //         currentClass: 'active'
+    // }); 
 
     $(window).on('load', function() {
        
