@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Grayrids">
     <title>神無月撮影所 - 預約</title>
+    <link id="favicon" rel="shortcut icon" href="img/favicon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -104,14 +105,16 @@
         </div>
         <div class="col-md-7 pl-3 position-relative">
           <div class="text-gray">
-            <div class="select-group w-25">
-              <select class="mb-3 form-control form-control-lg py-0 px-3 mt-1" id="selectBox" name="item" style="height: 55px;">
-                <option value="1">江户幕府</option>
-                <option value="2">吉原遊廓</option>
-                <option value="3">大正浪漫</option>
-              </select>
+            <div class="d-flex align-items-center mb-4">
+              <div class="select-group w-25">
+                <select class="form-control form-control-lg py-0 px-3 mt-1" id="selectBox" name="item" style="height: 55px;">
+                  <option value="1">江户幕府</option>
+                  <option value="2">吉原遊廓</option>
+                  <option value="3">大正浪漫</option>
+                </select>
+              </div>
+              <p class="ml-4">攝影棚建議使用人數：<span id="titleBox"></span></p>
             </div>
-            <p class="mb-3">攝影棚建議使用人數：<span id="titleBox"></span></p>
             <!-- <h2 id="titleBox" class="wow fadeInRight mb-3" data-wow-delay="0.4s"></h2> -->
   
             <div class="hour-form mb-4">
@@ -250,11 +253,15 @@
     </a>
 
     <div id="loader">
-      <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
+      <div class="loaderBox w-100">
+        <div class="loader loader-2"></div>
       </div>
-    </div>    
+      <div class="loaderText">
+        <div class="dynamic-text-wrapper">
+          <div class="dynamic-text">神無月撮影所</div>
+        </div>
+      </div>
+    </div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="js/jquery-min.js"></script>
@@ -295,23 +302,23 @@
         function switchItem(item) {
           switch(item) {
             case '1':
-              $('#imgBox').attr('src', 'img/combo1/img_2038.jpeg');
-              $('#titleBox').text('6');
+              $('#imgBox').attr('src', 'img/combo1/x70f9556_orig.jpg');
+              $('#titleBox').text('5-7人');
               $('#selectBox').val(1);
               break;
             case '2':
               $('#imgBox').attr('src', 'img/combo2/dsc-1561_1_orig.jpg');
-              $('#titleBox').text('5');
+              $('#titleBox').text('4-6人');
               $('#selectBox').val(2);
               break;
             case '3':
               $('#imgBox').attr('src', 'img/combo3/dsc-1433_orig.jpg');
-              $('#titleBox').text('4');
+              $('#titleBox').text('3-5人');
               $('#selectBox').val(3);
               break;
             default:
-              $('#imgBox').attr('src', 'img/combo1/img_2038.jpeg');
-              $('#titleBox').text('6');
+              $('#imgBox').attr('src', 'img/combo1/x70f9556_orig.jpg');
+              $('#titleBox').text('5-7人');
               $('#selectBox').val(1);
               break;
           }
