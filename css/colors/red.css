@@ -156,3 +156,11 @@ footer .menu li a:hover{
 .btn-red {
 	background-color: #e63707;
 }
+
+.bg-red {
+	background-color: #e63707;
+}
+
+.bg-gray, hr {
+	background-color: #adadad;
+}
