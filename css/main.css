@@ -1898,8 +1898,21 @@ input[type=date] {
   outline: none;
   background-color: #adadad;
 }
+
+.timefieldwrapperBooking.timeStart {
+  border-radius: 30px 0 0 30px;
+}
+
 .timefieldwrapperBooking.timeEnd {
   border-radius: 0 30px 30px 0;
+}
+
+.timefieldwrapperBooking select {
+  border-radius: 99rem;
+}
+
+.form-control {
+  color: #000;
 }
 
 .blog-comment {
