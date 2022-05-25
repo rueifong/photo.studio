@@ -44,19 +44,19 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto w-100 justify-content-end">
               <li class="nav-item">
-                <a class="nav-link page-scroll text-gray" href="#slider-area">首頁</a>
+                <a class="nav-link text-gray" href="index.html#slider-area">首頁</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link page-scroll text-gray" href="#team">關於我們</a>
+                <a class="nav-link text-gray" href="index.html#team">關於我們</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link page-scroll text-gray" href="choose.html">棚景介紹</a>
+                <a class="nav-link text-gray" href="choose.html">棚景介紹</a>
               </li>  
               <li class="nav-item">
-                <a class="nav-link page-scroll text-gray" href="book.html">預約</a>
+                <a class="nav-link text-gray" href="book.html">預約</a>
               </li>  
               <li class="nav-item">
-                <a class="nav-link page-scroll text-gray" href="contact.html">聯絡我們</a>
+                <a class="nav-link text-gray is-active active" href="contact.html">聯絡我們</a>
               </li> 
             </ul>              
           </div>
@@ -90,8 +90,8 @@
                 <h3 class="wow fadeInRight" data-wow-delay="0.2s">1617年 - 1946年</h3>
                 <h2 class="wow fadeInRight" data-wow-delay="0.4s">吉原遊廓</h2>
                 <h4 class="wow fadeInRight" data-wow-delay="0.6s">
-                  在華麗的和服與珠翠之中悄然獨立<br>
-                  在燈火通明的不夜城裡、在美麗容貌的背後，體驗她們真實的悲喜與憂愁
+                  江戶時代起源，男人的樂園<br>
+                  那是一個屬於時代的悲歌及浪漫
                 </h4>
                 <a href="choose2.html" class="btn btn-lg btn-common btn-effect wow fadeInRight" data-wow-delay="0.9s">預約攝影棚</a>
               </div>
@@ -132,79 +132,102 @@
     </header>
     <!-- Header Section End --> 
 
-    <!-- Team section Start -->
-    <section id="team" class="section">
-      <div class="container">
-        <div class="section-header">          
-          <h2 class="section-title">關於我們</h2>
-          <span>About Us</span>
-          <p class="section-subtitle">
-            <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis. -->
-          </p>
+    <!-- Contact Section Start -->
+    <section id="contact" class="section">      
+      <div class="contact-form">
+        <div class="container">
+          <div class="section-header">          
+            <h2 class="section-title">聯絡我們</h2>
+            <span>Contact Us</span>
+            <!-- <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis.</p> -->
+          </div>
+          <div class="row">          
+            <div class="col-lg-9 col-md-9 col-xs-12">
+              <div class="contact-block">
+                <form id="contactForm">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="姓名" required data-error="Please enter your name">
+                        <div class="help-block with-errors"></div>
+                      </div>                                 
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" placeholder="電子信箱" id="email" class="form-control" name="name" required data-error="Please enter your email">
+                        <div class="help-block with-errors"></div>
+                      </div> 
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <input type="text" placeholder="標題" id="msg_subject" class="form-control" required data-error="Please enter your subject">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group"> 
+                        <textarea class="form-control" id="message" placeholder="想說的話，想與我們聯絡的事項..." rows="7" data-error="Write your message" style="border-radius: 25px !important;" required></textarea>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="submit-button">
+                        <button class="btn btn-common btn-effect" id="submit" type="submit">送出訊息</button>
+                        <div id="msgSubmit" class="h3 hidden"></div> 
+                        <div class="clearfix"></div> 
+                      </div>
+                    </div>
+                  </div>            
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-12">
+              <div class="contact-deatils">
+                <!-- Content Info -->
+                <div class="contact-info_area">
+                  <div class="contact-info">
+                    <i class="lni-map"></i>
+                    <h5>地址</h5>
+                    <p>106 台北市大安區基隆路四段43號</p>
+                  </div>
+                  <!-- Content Info -->
+                  <div class="contact-info">
+                    <i class="lni-star"></i>
+                    <h5>電子信箱</h5>
+                    <p>contact-us@mail.ntust.edu.tw</p>
+                  </div>
+                  <!-- Content Info -->
+                  <div class="contact-info">
+                    <i class="lni-phone"></i>
+                    <h5>電話</h5>
+                    <p>(02)2733-3141</p>
+                  </div>
+                  <!-- Icon -->
+                  <ul class="footer-social">
+                    <li><a class="facebook" href="#"><i class="lni-facebook-filled"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="lni-twitter-filled"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="lni-linkedin-fill"></i></a></li>
+                    <li><a class="google-plus" href="#"><i class="lni-google-plus"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>            
+    </section>
+    <!-- Contact Section End -->
+    
+    <!-- Map Section Start -->
+    <section id="google-map-area">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-4">
+          <div class="col-12 padding-0">
+            <!-- <object style="border:0; height: 450px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34015.943594576835!2d-106.43242624069771!3d31.677719472407432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75d90e99d597b%3A0x6cd3eb9a9fcd23f1!2sCourtyard+by+Marriott+Ciudad+Juarez!5e0!3m2!1sen!2sbd!4v1533791187584"></object> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.62492993509!2d121.54051561500584!3d25.012857683982276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2176c4c0ad%3A0x90db5e44ee29f455!2z5ZyL56uL6Ie654Gj56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1652854768214!5m2!1szh-TW!2stw" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <div class="col-4">
-            <img src="img/logo1_gray.png" width="100" alt="logo" />
-            <span class="px-3"></span>
-            關於神無月撮影所，以下(略)
-          </div>
-          <!-- <div class="col-md-4 col-xs-12">
-            <div class="single-team">
-              <img src="img/team/team1.jpg" alt="">
-              <div class="team-details">
-                <div class="team-inner">
-                  <h4 class="team-title">Jhon Doe</h4>
-                  <p>Chief Technical Officer</p>
-                  <ul class="social-list">
-                    <li class="facebook"><a href="#"><i class="lni-facebook-filled"></i></a></li>
-                    <li class="twitter"><a href="#"><i class="lni-twitter-filled"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="lni-google-plus"></i></a></li>
-                    <li class="linkedin"><a href="#"><i class="lni-linkedin-fill"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-xs-12">
-            <div class="single-team">
-              <img src="img/team/team2.jpg" alt="">
-              <div class="team-details">
-                <div class="team-inner">
-                  <h4 class="team-title">Luke Chesser</h4>
-                  <p>Marketing Executive</p>
-                  <ul class="social-list">
-                    <li class="facebook"><a href="#"><i class="lni-facebook-filled"></i></a></li>
-                    <li class="twitter"><a href="#"><i class="lni-twitter-filled"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="lni-google-plus"></i></a></li>
-                    <li class="linkedin"><a href="#"><i class="lni-linkedin-fill"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-xs-12">
-            <div class="single-team">
-              <img src="img/team/team3.jpg" alt="">
-              <div class="team-details">
-                <div class="team-inner">                  
-                  <h4 class="team-title">David Givens</h4>
-                  <p>Business Manager</p>
-                  <ul class="social-list">
-                    <li class="facebook"><a href="#"><i class="lni-facebook-filled"></i></a></li>
-                    <li class="twitter"><a href="#"><i class="lni-twitter-filled"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="lni-google-plus"></i></a></li>
-                    <li class="linkedin"><a href="#"><i class="lni-linkedin-fill"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
     </section>
-    <!-- Team section End -->
+    <!-- Map Section End -->
 
     <!-- Footer Section Start -->
     <footer class="border-top">
@@ -304,8 +327,8 @@
     <script src="js/nivo-lightbox.js"></script>
     <script src="js/owl.carousel.js"></script>    
     <script src="js/jquery.stellar.min.js"></script>    
-    <script src="js/jquery.nav.js"></script>    
-    <script src="js/scrolling-nav.js"></script>    
+    <!-- <script src="js/jquery.nav.js"></script>     -->
+    <!-- <script src="js/scrolling-nav.js"></script>     -->
     <script src="js/jquery.easing.min.js"></script>     
     <script src="js/wow.js"></script> 
     <script src="js/jquery.vide.js"></script>

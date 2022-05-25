@@ -389,7 +389,7 @@ button:focus {
 .back-to-top {
   display: none;
   position: fixed;
-  bottom: 10px;
+  bottom: 30px;
   right: 30px;
 }
 
@@ -1894,6 +1894,14 @@ button:focus {
   padding-bottom: 10px;
 }
 
+input[type=date] {
+  outline: none;
+  background-color: #adadad;
+}
+.timefieldwrapperBooking.timeEnd {
+  border-radius: 0 30px 30px 0;
+}
+
 .blog-comment {
   background: #fff;
   padding: 50px 30px;
@@ -2324,7 +2332,7 @@ footer .menu li a:hover {
 
 #copyright {
   background-color: #212121;
-  padding: 20px 0 10px;
+  padding: 30px 0;
   border-top: 1px solid #adadad;
   color: #546E7A;
 }
