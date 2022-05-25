@@ -7,6 +7,13 @@ a:hover{
 .btn-common{
     background-color: #e63707;
 }
+.btn-view {
+    background-color: #adadad;
+}
+.btn-view:hover {
+    background-color: #e63707;
+	color: #fff;
+}
 .btn-border:hover{
 	background-color: #e63707;
 }
