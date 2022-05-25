@@ -1915,6 +1915,10 @@ input[type=date] {
   color: #000;
 }
 
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+  background-color: #e63707;
+}
+
 .blog-comment {
   background: #fff;
   padding: 50px 30px;
