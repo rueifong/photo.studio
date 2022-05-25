@@ -7,7 +7,7 @@
     <meta name="keywords" content="Bootstrap, Landing page, Template, Registration, Landing">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Grayrids">
-    <title>神無月撮影所 - 吉原遊廓</title>
+    <title>神無月撮影所 - 預約</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,10 +50,10 @@
                 <a class="nav-link text-gray" href="index.html#team">關於我們</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-gray is-active active" href="choose.html">選擇攝影棚</a>
+                <a class="nav-link text-gray" href="choose.html">選擇攝影棚</a>
               </li>  
               <li class="nav-item">
-                <a class="nav-link text-gray" href="book.html">預約</a>
+                <a class="nav-link text-gray is-active active" href="book.html">預約</a>
               </li>  
               <li class="nav-item">
                 <a class="nav-link text-gray" href="index.html#contact">聯絡我們</a>
@@ -95,79 +95,43 @@
       </div>
     </section> -->
     <!-- Choose section End -->    
-
-    <div class="choose-container">
-      <div class="row">
-        <div class="col-md-12">
-          <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
-            <!-- slides -->
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="img/combo2/dsc-1561_1_orig.jpg" alt="Hills">
-              </div>
-    
-              <div class="carousel-item">
-                <img src="img/combo2/dsc-2234_orig.jpg" alt="Hills">
-              </div>
-    
-              <div class="carousel-item">
-                <img src="img/combo2/img-0401-2_orig.jpg" alt="Hills">
-              </div>
-    
-              <div class="carousel-item">
-                <img src="img/combo2/img-0418-2_1_orig.jpg" alt="Hills">
-              </div>
-    
-              <div class="carousel-item">
-                <img src="img/combo2/img-0432-2_1_orig.jpg" alt="Hills">
-              </div>
+    <div class="mt-2">&nbsp;</div>
+    <div class="row mx-5 mt-5 mb-3">
+      <div class="col-md-6 px-0 py-2">
+        <img id="imgBox" src="" width="95%" alt="Hills">
+      </div>
+      <div class="col-md-6 pl-3 position-relative">
+        <div class="text-gray">
+          <select class="mb-3 form-control form-control-lg w-25 py-0 px-3 mt-1" id="selectBox" name="item">
+            <option value="1">江户幕府</option>
+            <option value="2">吉原遊廓</option>
+            <option value="3">大正浪漫</option>
+          </select>
+          <p class="mb-3">攝影棚建議使用人數：<span id="titleBox"></span></p>
+          <!-- <h2 id="titleBox" class="wow fadeInRight mb-3" data-wow-delay="0.4s"></h2> -->
+          <input type="date" value="2022-05-26" class="form-control w-50" />
+          <select class="mb-3 form-control form-control-lg w-50 py-0 px-3 mt-1" id="timeBox" name="time">
+            <option value="1">13:00 - 14:00</option>
+            <option value="1">14:00 - 15:00</option>
+            <option value="1">15:00 - 16:00</option>
+            <option value="1">16:00 - 17:00</option>
+            <option value="1">17:00 - 18:00</option>
+          </select>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                是否要使用我們的御用攝影師？
+              </label>
             </div>
-    
-            <!-- Left right -->
-            <a class="carousel-control-prev" href="#custCarousel" data-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#custCarousel" data-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </a>
-    
-            <!-- Thumbnails -->
-            <ol class="carousel-indicators list-inline">
-              <li class="list-inline-item active">
-                <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel">
-                  <img src="img/combo2/dsc-1561_1_orig.jpg" class="img-fluid">
-                </a>
-              </li>
-    
-              <li class="list-inline-item">
-                <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel">
-                  <img src="img/combo2/dsc-2234_orig.jpg" class="img-fluid">
-                </a>
-              </li>
-    
-              <li class="list-inline-item">
-                <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel">
-                  <img src="img/combo2/img-0401-2_orig.jpg" class="img-fluid">
-                </a>
-              </li>
-    
-              <li class="list-inline-item">
-                <a id="carousel-selector-3" data-slide-to="3" data-target="#custCarousel">
-                  <img src="img/combo2/img-0418-2_1_orig.jpg" class="img-fluid">
-                </a>
-              </li>
-
-              <li class="list-inline-item">
-                <a id="carousel-selector-4" data-slide-to="4" data-target="#custCarousel">
-                  <img src="img/combo2/img-0432-2_1_orig.jpg" class="img-fluid">
-                </a>
-              </li>
-             </ol>
+          </div>
+          <div class="position-absolute d-flex justify-content-end" style="right: 0; bottom: 5px;">
+            <a href="choose1.html" class="btn btn-lg btn-common btn-effect wow fadeInRight" data-wow-delay="0.9s">確定預約</a>
           </div>
         </div>
       </div>
-    </div>    
-
+    </div>
+    
     <!-- Footer Section Start -->
     <footer class="border-top">
       <!-- Footer Area Start -->
@@ -274,10 +238,42 @@
     
     <script>
       $(function() {
-        $('.carousel').carousel({
-          interval: false
-        })
-      })
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const item = urlParams.get('item');
+        switchItem(item);
+
+        function switchItem(item) {
+          switch(item) {
+            case '1':
+              $('#imgBox').attr('src', 'img/combo1/img_2038.jpeg');
+              $('#titleBox').text('6');
+              $('#selectBox').val(1);
+              break;
+            case '2':
+              $('#imgBox').attr('src', 'img/combo2/dsc-1561_1_orig.jpg');
+              $('#titleBox').text('5');
+              $('#selectBox').val(2);
+              break;
+            case '3':
+              $('#imgBox').attr('src', 'img/combo3/dsc-1433_orig.jpg');
+              $('#titleBox').text('4');
+              $('#selectBox').val(3);
+              break;
+            default:
+              $('#imgBox').attr('src', 'img/combo1/img_2038.jpeg');
+              $('#titleBox').text('6');
+              $('#selectBox').val(1);
+              break;
+          }
+
+          $('#selectBox').on('change', function() {
+            switchItem($(this).val());
+          });
+          
+        }
+      });
     </script>
+
   </body>
 </html>
