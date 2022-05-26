@@ -156,9 +156,9 @@
     responsive: false
   });
 
-  // setTimeout(function() {
-  //   $('#loader').fadeOut();
-  // }, 3000);
+  setTimeout(function() {
+    $('#loader').fadeOut();
+  }, 2000);
 
 /* 
    Page Loader
