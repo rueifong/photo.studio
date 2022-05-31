@@ -147,31 +147,101 @@
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content bg-dark">
+      <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content bg-dark modal-content-0">
           <div class="modal-header border-bottom-0">
-            <h6 class="modal-title text-red" id="exampleModalLabel">
-              大小姐/大少爺您好，<br/>
-              請問您今天想接受什麼樣的服務呢？
-            </h6>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <h5 class="modal-title text-red" id="exampleModalLabel">
+              你還沒有想好要步入哪個時空嗎？
+            </h5>
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
-            </button>
+            </button> -->
           </div>
           <div class="modal-body">
-            <div class="d-flex mb-3">
-              <button type="button" class="btn btn-gray rounded py-3 w-50 mr-3" data-dismiss="modal">選項1: xxxx</button>
-              <button type="button" class="btn btn-gray rounded py-3 w-50">選項2: xxxx</button>
-            </div>
             <div class="d-flex">
-              <button type="button" class="btn btn-gray rounded py-3 w-50 mr-3" data-dismiss="modal">選項3: xxxx</button>
-              <button type="button" class="btn btn-gray rounded py-3 w-50">選項4: xxxx</button>
+              <button type="button" class="btn btn-sm btn-common rounded w-50 mr-3" data-dismiss="modal">我想好了</button>
+              <button type="button" class="btn-0 btn btn-sm btn-common rounded w-50">還沒想好</button>
             </div>
           </div>
           <!-- <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary">Save changes</button>
           </div> -->
+        </div>
+        <div class="modal-content bg-dark modal-content-1" style="display: none;">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title text-red" id="exampleModalLabel">
+              一天之中，你喜歡哪個時段？
+            </h5>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex">
+              <button type="button" d-type="江戶" class="btn-1 btn btn-sm btn-common rounded w-100 mr-3">清晨</button>
+              <button type="button" d-type="大正" class="btn-1 btn btn-sm btn-common rounded w-100 mr-3">下午</button>
+              <button type="button" d-type="吉原" class="btn-1 btn btn-sm btn-common rounded w-100">夜晚</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content bg-dark modal-content-2" style="display: none;">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title text-red" id="exampleModalLabel">
+              你喜歡過怎樣的生活？
+            </h5>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex">
+              <button type="button" d-type="吉原" class="btn-2 btn btn-sm btn-common rounded w-100 mr-3">紙醉金迷</button>
+              <button type="button" d-type="江戶" class="btn-2 btn btn-sm btn-common rounded w-100 mr-3">平靜安逸</button>
+              <button type="button" d-type="大正" class="btn-2 btn btn-sm btn-common rounded w-100">悠遊愜意</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content bg-dark modal-content-3" style="display: none;">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title text-red" id="exampleModalLabel">
+              你喜歡的服裝風格？
+            </h5>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex">
+              <button type="button" d-type="大正" class="btn-3 btn btn-sm btn-common rounded w-100 mr-3">文藝浪漫</button>
+              <button type="button" d-type="吉原" class="btn-3 btn btn-sm btn-common rounded w-100 mr-3">華麗繁複</button>
+              <button type="button" d-type="江戶" class="btn-3 btn btn-sm btn-common rounded w-100">正式傳統</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content bg-dark modal-content-4" style="display: none;">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title text-red" id="exampleModalLabel">
+              你更喜歡哪種想法？
+            </h5>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex">
+              <button type="button" d-type="吉原" class="btn-4 btn btn-sm btn-common rounded w-100 mr-3">及時行樂</button>
+              <button type="button" d-type="大正" class="btn-4 btn btn-sm btn-common rounded w-100 mr-3">自由開放</button>
+              <button type="button" d-type="江戶" class="btn-4 btn btn-sm btn-common rounded w-100">循規蹈矩</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content bg-dark modal-content-5" style="display: none;">
+          <!-- <div class="modal-header border-bottom-0">
+          </div> -->
+          <div class="modal-body">
+            <h4 class="modal-title text-red mb-3" id="exampleModalLabel">
+              結果分析：
+            </h4>
+            <p class="text-gray">
+              您適合的拍攝場景為<span id="answerTitle" class="text-red"></span>，<span id="answerContent"></span>
+            </p>
+            <div class="d-flex justify-content-end">
+              <a id="answerLink" href="choose1.html" class="mr-3 btn btn-sm btn-common">看更多<span id="answerTitle"></span></a>
+
+              <!-- <button type="button" d-type="吉原" class="btn-1 btn btn-sm btn-common rounded w-100 mr-3">及時行樂</button>
+              <button type="button" d-type="大正" class="btn-1 btn btn-sm btn-common rounded w-100 mr-3">自由開放</button>
+              <button type="button" d-type="江戶" class="btn-1 btn btn-sm btn-common rounded w-100">循規蹈矩</button> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -293,6 +363,114 @@
     <script>
       $(function() {
         // $('#myModal').modal('show');
+
+        var dType1 = 0; // 江戶
+        var dType2 = 0; // 吉原
+        var dType3 = 0; // 大正
+
+        // 問題0
+        $('.btn-0').on('click', function() {
+          $('.modal-content').hide();
+          $('.modal-content-1').fadeIn(300);
+          var value = $(this).attr('d-type');
+          switch (value) {
+            case '江戶': dType1++; break;
+            case '吉原': dType2++; break;
+            case '大正': dType3++; break;
+          }
+        });
+        // 問題1
+        $('.btn-1').on('click', function() {
+          $('.modal-content').hide();
+          $('.modal-content-2').fadeIn(300);
+          var value = $(this).attr('d-type');
+          switch (value) {
+            case '江戶': dType1++; break;
+            case '吉原': dType2++; break;
+            case '大正': dType3++; break;
+          }
+        });
+        // 問題2
+        $('.btn-2').on('click', function() {
+          $('.modal-content').hide();
+          $('.modal-content-3').fadeIn(300);
+          var value = $(this).attr('d-type');
+          switch (value) {
+            case '江戶': dType1++; break;
+            case '吉原': dType2++; break;
+            case '大正': dType3++; break;
+          }
+        });
+        // 問題3
+        $('.btn-3').on('click', function() {
+          $('.modal-content').hide();
+          $('.modal-content-4').fadeIn(300);
+          var value = $(this).attr('d-type');
+          switch (value) {
+            case '江戶': dType1++; break;
+            case '吉原': dType2++; break;
+            case '大正': dType3++; break;
+          }
+        });
+        // 問題4
+        $('.btn-4').on('click', function() {
+          $('.modal-content').hide();
+          $('.modal-content-5').fadeIn(300);
+          var value = $(this).attr('d-type');
+          switch (value) {
+            case '江戶': dType1++; break;
+            case '吉原': dType2++; break;
+            case '大正': dType3++; break;
+          }
+
+          var count  = 0;
+          const dType = [dType1, dType2, dType3];
+          dType.forEach((data, id) => {
+            if (data == 3) {
+              switch (id) {
+                case 0: switchAnswer('江戶'); break;
+                case 1: switchAnswer('吉原'); break;
+                case 2: switchAnswer('大正'); break;
+              }
+            }
+            if (data == 2) {
+              finalId = id;
+              count++;
+            }
+          });
+          
+          if (count == 2) {
+            switchAnswer(value);
+          } else if (count == 1) {
+            switch (finalId) {
+              case 0: switchAnswer('江戶'); break;
+              case 1: switchAnswer('吉原'); break;
+              case 2: switchAnswer('大正'); break;
+            }
+          }
+
+          // console.log(dType1, dType2, dType3);
+        });
+
+        function switchAnswer(type) {
+          switch (type) {
+            case '江戶':
+              $('#answerTitle').text('江户幕府');
+              $('#answerContent').text('江户幕府');
+              $('#answerLink').attr('href', 'choose1.html');
+              break;
+            case '吉原':
+              $('#answerTitle').text('吉原遊廓');
+              $('#answerContent').text('吉原遊廓');
+              $('#answerLink').attr('href', 'choose2.html');
+              break;
+            case '大正':
+              $('#answerTitle').text('大正浪漫');
+              $('#answerContent').text('大正浪漫');
+              $('#answerLink').attr('href', 'choose3.html');
+              break;
+          }
+        }
       });
     </script>
 
