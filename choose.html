@@ -231,11 +231,13 @@
             <h4 class="modal-title text-red mb-3" id="exampleModalLabel">
               結果分析：
             </h4>
-            <p class="text-gray">
-              您適合的拍攝場景為<span id="answerTitle" class="text-red"></span>，<span id="answerContent"></span>
+            <img id="answerImg" class="mb-3 w-100" src="" />
+            <p class="text-gray mb-3">
+              <!-- 你適合的拍攝場景為<span id="answerTitle" class="text-red"></span>， -->
+              <span id="answerContent"></span>
             </p>
             <div class="d-flex justify-content-end">
-              <a id="answerLink" href="choose1.html" class="mr-3 btn btn-sm btn-common">看更多<span id="answerTitle"></span></a>
+              <a id="answerLink" href="choose1.html" class="mr-3 btn btn-sm btn-common">看更多<span class="answerTitle"></span></a>
 
               <!-- <button type="button" d-type="吉原" class="btn-1 btn btn-sm btn-common rounded w-100 mr-3">及時行樂</button>
               <button type="button" d-type="大正" class="btn-1 btn btn-sm btn-common rounded w-100 mr-3">自由開放</button>
@@ -455,19 +457,22 @@
         function switchAnswer(type) {
           switch (type) {
             case '江戶':
-              $('#answerTitle').text('江户幕府');
-              $('#answerContent').text('江户幕府');
+              $('#answerTitle, .answerTitle').text('江户幕府');
+              $('#answerContent').html('你適合平靜安穩、河清海晏的<span class="text-red">江戶幕府</span>場景，穿著正式端莊的服裝開啟寧靜的早晨吧！');
               $('#answerLink').attr('href', 'choose1.html');
+              $('#answerImg').attr('src', 'img/combo1/x70f9556_orig.jpg');
               break;
             case '吉原':
-              $('#answerTitle').text('吉原遊廓');
-              $('#answerContent').text('吉原遊廓');
+              $('#answerTitle, .answerTitle').text('吉原遊廓');
+              $('#answerContent').html('你適合燈紅酒綠、紙醉金迷的<span class="text-red">吉原遊廓</span>場景，穿著華麗的服裝在夜晚中肆意的展現魅力吧！');
               $('#answerLink').attr('href', 'choose2.html');
+              $('#answerImg').attr('src', 'img/combo2/dsc-1561_1_orig.jpg');
               break;
             case '大正':
-              $('#answerTitle').text('大正浪漫');
-              $('#answerContent').text('大正浪漫');
+              $('#answerTitle, .answerTitle').text('大正浪漫');
+              $('#answerContent').html('你適合悠閒愜意、充滿文藝氣息的<span class="text-red">大正浪漫</span>場景，穿著簡便自在的服裝享受午後時光吧！');
               $('#answerLink').attr('href', 'choose3.html');
+              $('#answerImg').attr('src', 'img/combo3/dsc-1433_orig.jpg');
               break;
           }
         }
