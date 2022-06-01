@@ -119,19 +119,43 @@
   
             <div class="hour-form mb-4">
               <div data-v-05bb055e="" data-v-e745fbfe="" class="time-choose"><div data-v-05bb055e="" class="timefieldwrapperBooking start_date"><span data-v-05bb055e="" class="js-hour-date date-format">
-                <input id="date" type="date" value="2022-05-26" style="height: 50px; border: none;" /></span></div>
+                <input id="date" type="date" value="2022-06-01" style="height: 50px; border: none;" /></span></div>
               </div>
             </div>
             
             <div class="hour-form mb-4">
               <div data-v-05bb055e="" data-v-e745fbfe="" class="time-choose">    
-              <div data-v-05bb055e="" class="timefieldwrapperBooking timeInput timeStart"><select id="start_time" data-v-05bb055e="" name="startTime" id="startTime"><option data-v-05bb055e="" value="" disabled="disabled" selected="selected">開始時間</option><option data-v-05bb055e="" value="17:30">17:30</option><option data-v-05bb055e="" value="18:00">18:00</option><option data-v-05bb055e="" value="18:30">18:30</option><option data-v-05bb055e="" value="19:00">19:00</option><option data-v-05bb055e="" value="19:30">19:30</option><option data-v-05bb055e="" value="20:00">20:00</option><option data-v-05bb055e="" value="20:30">20:30</option><option data-v-05bb055e="" value="21:00">21:00</option><option data-v-05bb055e="" value="21:30">21:30</option><option data-v-05bb055e="" value="22:00">22:00</option></select></div><span data-v-05bb055e="" class="time-section-arrow">→</span><div data-v-05bb055e="" class="timefieldwrapperBooking timeInput timeEnd"><select id="end_time" data-v-05bb055e="" name="endTime" id="endTime"><option data-v-05bb055e="" value="" disabled="disabled" selected="selected">結束時間</option><option data-v-05bb055e="" value="17:30">17:30</option><option data-v-05bb055e="" value="18:00">18:00</option><option data-v-05bb055e="" value="18:30">18:30</option><option data-v-05bb055e="" value="19:00">19:00</option><option data-v-05bb055e="" value="19:30">19:30</option><option data-v-05bb055e="" value="20:00">20:00</option><option data-v-05bb055e="" value="20:30">20:30</option><option data-v-05bb055e="" value="21:00">21:00</option><option data-v-05bb055e="" value="21:30">21:30</option><option data-v-05bb055e="" value="22:00">22:00</option></select></div></div>
+              <div data-v-05bb055e="" class="timefieldwrapperBooking timeInput timeStart">
+                <select id="start_time" data-v-05bb055e="" name="startTime" id="startTime">
+                  <option data-v-05bb055e="" value="" disabled="disabled" selected="selected">開始時間</option>
+                  <option data-v-05bb055e="" value="17">17:00</option>
+                  <option data-v-05bb055e="" value="18">18:00</option>
+                  <option data-v-05bb055e="" value="19">19:00</option>
+                  <option data-v-05bb055e="" value="20">20:00</option>
+                  <option data-v-05bb055e="" value="21">21:00</option>
+                </select>
+              </div>
+              <span data-v-05bb055e="" class="time-section-arrow">→</span>
+              <div data-v-05bb055e="" class="timefieldwrapperBooking timeInput timeEnd">
+                <select id="end_time" data-v-05bb055e="" name="endTime" id="endTime">
+                  <option data-v-05bb055e="" value="" disabled="disabled" selected="selected">結束時間</option>
+                  <option data-v-05bb055e="" value="18">18:00</option>
+                  <option data-v-05bb055e="" value="19">19:00</option>
+                  <option data-v-05bb055e="" value="20">20:00</option>
+                  <option data-v-05bb055e="" value="21">21:00</option>
+                  <option data-v-05bb055e="" value="22">22:00</option>
+                </select></div></div>
             </div>
+
+            <ul class="mb-4">
+              <li>◆ 平日一小時 NT$<span class="price1"></span></li>
+              <li>◆ 假日一小時 NT$<span class="price2"></span></li>
+            </ul>
   
             <!-- <div class="form-group"> -->
               <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">是否要使用我們的御用攝影師？</label>
+                <input type="checkbox" class="custom-control-input" id="haha">
+                <label class="custom-control-label" for="haha">是否要使用我們的御用攝影師？(800/hr)</label>
               </div>
             <!-- </div> -->
             <div class="position-absolute d-flex justify-content-end" style="right: 0; bottom: 5px;">
@@ -155,10 +179,13 @@
             </button>
           </div>
           <div class="modal-body">
-            <p class="text-gray">
+            <p class="text-gray mb-3">
               預約棚景：<span id="titleText"></span><br />
               預約日期：<span id="dateText"></span><br />
               預約時段：<span id="timeText"></span>
+            </p>
+            <p class="text-left text-red">
+              總共： NT$<span id="priceText">300</span>
             </p>
             <div class="d-flex justify-content-end">
               <button type="button" class="btn btn-red" data-dismiss="modal">確定</button>
@@ -294,9 +321,33 @@
         switchItem(item);
 
         $('#book_btn').on('click', function() {
-          $('#titleText').text($('#selectBox').find('option').filter(':selected').text());
+          var titleText = $('#selectBox').find('option').filter(':selected').text();
+          $('#titleText').text(titleText);
           $('#dateText').text($('#date').val());
-          $('#timeText').text($('#start_time').val() + ' - ' + $('#end_time').val());
+          $('#timeText').text($('#start_time').val() + ':00 - ' + $('#end_time').val() + ':00');
+
+          var date = new Date($('#date').val());
+          var dayOfWeek = date.getDay();
+          var isWeekend = (dayOfWeek === 6) || (dayOfWeek  === 0);
+          var price = 0;
+          var hr = $('#end_time').val() - $('#start_time').val();
+          var haha = $('#haha')[0].checked;
+          var photographer = (haha) ? 800 : 0;
+
+          switch(titleText) {
+            case '江户幕府':
+              price = (isWeekend) ? 1800 : 1500;
+              break;
+            case '吉原遊廓':
+              price = (isWeekend) ? 2100 : 1800;
+              break;
+            case '大正浪漫':
+              price = (isWeekend) ? 2100 : 1800;
+              break;
+          }
+
+          total = price * hr + photographer * hr;
+          $('#priceText').text(total);
         });
 
         function switchItem(item) {
@@ -305,21 +356,29 @@
               $('#imgBox').attr('src', 'img/combo1/x70f9556_orig.jpg');
               $('#titleBox').text('5-7人');
               $('#selectBox').val(1);
+              $('#price1, .price1').text(1500);
+              $('#price2, .price2').text(1800);
               break;
             case '2':
               $('#imgBox').attr('src', 'img/combo2/dsc-1561_1_orig.jpg');
               $('#titleBox').text('4-6人');
               $('#selectBox').val(2);
-              break;
+              $('#price1, .price1').text(1800);
+              $('#price2, .price2').text(2100);
+             break;
             case '3':
               $('#imgBox').attr('src', 'img/combo3/dsc-1433_orig.jpg');
               $('#titleBox').text('3-5人');
               $('#selectBox').val(3);
+              $('#price1, .price1').text(1800);
+              $('#price2, .price2').text(2100);
               break;
             default:
               $('#imgBox').attr('src', 'img/combo1/x70f9556_orig.jpg');
               $('#titleBox').text('5-7人');
               $('#selectBox').val(1);
+              $('#price1, .price1').text(1500);
+              $('#price2, .price2').text(1800);
               break;
           }
 
